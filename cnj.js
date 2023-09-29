@@ -31,9 +31,9 @@ async function consultarAPI(cnpjBasico, cnpjOrdem, cnpjDiv) {
 
     //Funçao para ler arquivo csv
     function lerCSV() {
-        fs.createReadStream('Arquivo.csv')
-        .pipe(csv())
-        .on('data', (row)=>{
+        fs.createReadStream('seuarquivo.csv')
+         .pipe(csv())
+         .on('data', (row)=>{
             const cnpjBasico = row['CNPJ_Basico']; // substitua pelo nomes corretos
             const cnpjOrdem = row['CNPJ_Ordem'];
             const cnpjDiv = row['CNPJ_Div'];
